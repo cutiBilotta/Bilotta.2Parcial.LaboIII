@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <script src="./js/script.js" type="module"></script>
+
+    <link href="./css/estilos.css" rel="stylesheet"></href>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <title>Superheroes</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light" >
+            <a class="navbar-brand" href="#">
+              <img src="./imgSuperheroes/logo.png" alt="logo"></a>
+
+            <ul class="nav justify-content-end nav-pills " > 
+                <li class="nav-item " ><a  class="nav-link active" href="paginaPrincipal.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link active" href="#">Personajes</a></li>
+                <li class="nav-item"><a  class="nav-link active"href="#">Blog</a></li>
+                <li class="nav-item"><a  class="nav-link active "href="#">Contacto</a></li>
+
+            </ul>
+          </nav>
+    </header>
+    
+    <main>
+            </br>
+            <h2 id="tituloAlta">Crud Heroes - Alta Superheroe</h2>
+            <div class="container">
+
+                <form id = "formulario" class=" min-vw-75 rounded border-5 border-primary">
+                </br></br>
+
+                <div class="form-group ">
+                        <label for= "txtNombre">Nombre</label">
+                        <i class="fa-solid fa-pen fa-xl" style="color: #000000;"></i>
+                    </br></br><input type="text"   name="txtNombre"  placeholder="ingrese el nombre..." autocomplete="off" id="txtNombre" class="form-control text-center " required >
+                    <small class="form-text text-muted">Largo maximo 25 caracteres</small></br></br>
+                        
+                    <label for="txtAlias">Alias</label>
+                        <i class="fa-solid fa-mask fa-xl" style="color: #000000;"></i> 
+                    </br></br><input type="text" name="txtAlias"  placeholder="ingrese el alter ego..." autocomplete="off" id="txtAlias" class="form-control text-center" required>
+                    <small class="form-text text-muted ">Largo maximo 25 caracteres</small></br></br>
+
+
+                    <label for="rngFuerza">Fuerza</label>
+                        <i class="fa-solid fa-hand-fist fa-xl" style="color: #000000;"></i>
+                    </br></br><input type="range" name="rngFuerza"  min ="0"  max="100" autocomplete="off" id="rngFuerza" required class="form-control text-center" ></br></br>
+                    
+                        <label for="selectArmas">Arma</label>
+                        <i class="fa-solid fa-shield-halved fa-xl" style="color: #000000;"></i>
+                    </br></br><select name="armas" id="selectArmas"   required class="form-select form-select-sm text-center" ></select></br></br>
+                </div>
+
+                    </br>
+                            <label >Editorial</label>
+                            <i class="fa-solid fa-pen fa-xl" style="color: #000000;"></i></br></br>
+                        
+                            <div class="form-check form-check-inline">
+
+                                <input type ="radio" name="rdoEditorial" value="DC" checked class="form-check-input">
+                                <label class="form-check-label">DC</label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input type ="radio" name="rdoEditorial" value="Marvel" class="form-check-input">
+                                <label class="form-check-label" >MARVEL</label>
+                            </div>
+
+                        </br></br>
+                        
+                        
+                            </br>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col mt-3"><input type="button" value="Cancelar" id="btnCancelar" class="btn btn-primary btn-lg"></div>
+                                    <div class="col  d-flex align-items-center justify-content-center"> <button value="Enviar" id="btnEnviar" class="btn btn-success btn-lg m-3 ">
+                                        <i class="fa-solid fa-floppy-disk fa-xl"></i>  Guardar
+                                    </button></div>
+                                    <div class="col mt-3 "><input type="button" value="Eliminar" id="btnDelete" class="btn btn-danger btn-lg"></div>
+                                </div>
+                                
+                                <input type="hidden" name="txtId" id="txtId" >
+                            
+                            </div>
+                        </br>
+                    
+            </form>
+        </div>
+        </main>
+        <section id="sectionTabla">
+        </br></br>   
+        
+        
+       
+                <fieldset class="rounded border-5 border-secondary"></br>  
+                    <legend>Filtros</legend><br></br> 
+                        
+                            <label for="selectEditorial">Filtrar Editorial:</label></br>
+                            <select name="editoriales" id="selectEditorial" class="form-select form-select-sm text-center " >
+                                <option value="DC">DC</option>
+                                <option value="MARVEL">MARVEL</option>
+                                <option value="TODOS" selected>TODOS</option>
+                            </select>
+                    
+                        </br>
+                    <div class="colform-check">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col" >
+                                    <input type="checkbox" value="alias" id="chkAlias" class="form-check-input">  Alias<br></br>
+                                    <input type="checkbox" value="nombre" id="chkNombre" class="form-check-input">  Nombre<br></br>
+                                    <input type="checkbox" value="fuerza" id="chkFuerza" class="form-check-input">  Fuerza<br></br>
+                                </div>
+
+                                <div class="col" >
+                                    <input type="checkbox" value="editorial" id="chkEditorial" class="form-check-input">  Editorial<br></br>
+                                    <input type="checkbox" value="arma" id="chkArma" class="form-check-input">  Arma<br></br>
+                                    <input type="checkbox" value="id" id="chkId" class="form-check-input" disabled>  ID<br></br>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col sm" >
+                                    <label for="pPromedio">Promedio de Fuerzas:</label></br>
+                                    <input type="text" readonly id="pPromedio" class="text-center rounded" >
+                                   
+                                </div>
+                                <div class="col sm" >
+                                    <input type="button" value="Filtrar" id="btnFiltrar" class="btn btn-outline-success btn-lg" ></br></br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </fieldset></br>
+                  
+            </br></br>
+
+            <div id="divLoader">
+                 <i class="fa-solid fa-bolt-lightning fa-spin fa-2xl" style="color: #000000;" id="spinner"></i></div>
+           
+            <div class="table-responsive " id="divTabla"></div>
+            </br></br>
+        
+
+        <fieldset class="rounded border-5 border-secondary">
+            <legend>Ordenar</legend>
+            </br>              
+            <input type="button" value="Fuerza ↓↑" id="btnFuerza" class="btn btn-dark btn-lg m-3" >
+            <input type="button" value="Alfabet.↓↑" id="btnAlfabet" class="btn btn-dark btn-lg m-3" ></br></br>
+        </fieldset></br></br>
+    </section>
+
+    
+
+    <footer>
+        <nav class="navbar navbar-light bg-light " >
+            
+            <ul class="nav justify-content-end nav-pills " > 
+                <li class="nav-item " ><a  class="nav-link active" href="paginaPrincipal.html">Home</a></li>
+                <li class="nav-item"><a  class="nav-link active" href="#">Personajes</a></li>
+                <li class="nav-item"><a  class="nav-link active"href="#">Blog</a></li>
+                <li class="nav-item"><a  class="nav-link active "href="#">Contacto</a></li>
+    
+            </ul>
+            <p id="pFooter">Laboratorio III - Todos los derechos reservados 2023 &copy;</p>
+    
+          </nav>
+    </footer>
+    
+   
+
+
+    
+
+    
+</body>
+</html>

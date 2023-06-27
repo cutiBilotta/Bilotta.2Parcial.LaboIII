@@ -1,0 +1,76 @@
+{
+  "anuncios": [
+    {
+      "id": 6,
+      "nombre": "Clark Kent",
+      "fuerza": 79,
+      "alias": "Superman",
+      "editorial": "DC",
+      "arma": "Martillo"
+    },
+    {
+      "id": 9,
+      "nombre": "Peter Parker",
+      "fuerza": 100,
+      "alias": "Spiderman",
+      "editorial": "Marvel",
+      "arma": "Flechas"
+    },
+    {
+      "id": 11,
+      "nombre": "Ana",
+      "fuerza": 79,
+      "alias": "Wonder Woman",
+      "editorial": "DC",
+      "arma": "Espada"
+    },
+    {
+      "id": 12,
+      "nombre": "Chris",
+      "fuerza": 100,
+      "alias": "Thor",
+      "editorial": "Marvel",
+      "arma": "Martillo"
+    },
+    {
+      "id": 13,
+      "nombre": "Brian",
+      "fuerza": 62,
+      "alias": "Capitan America",
+      "editorial": "Marvel",
+      "arma": "Escudo"
+    },
+    {
+      "id": 14,
+      "nombre": "Juan",
+      "fuerza": 61,
+      "alias": "Batman",
+      "editorial": "DC",
+      "arma": "Armadura"
+    },
+    {
+      "id": 20,
+      "nombre": "Bruce",
+      "fuerza": 100,
+      "alias": "Hulk",
+      "editorial": "Marvel",
+      "arma": "Armadura"
+    },
+    {
+      "id": 22,
+      "nombre": "a",
+      "fuerza": 100,
+      "alias": "a",
+      "editorial": "Marvel",
+      "arma": "Armadura"
+    }
+  ],
+  "armas": [
+    "Armadura",
+    "Espada",
+    "Martillo",
+    "Escudo",
+    "Arma de Fuego",
+    "Flechas"
+  ]
+}
